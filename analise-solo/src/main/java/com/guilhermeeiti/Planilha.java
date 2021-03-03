@@ -81,7 +81,7 @@ public class Planilha {
             return 12.0;
         }
         
-        return 0;
+        return 0.0;
     }
 
     public double getPotassioIdeal() {
@@ -91,7 +91,7 @@ public class Planilha {
             return 0.25;
         }
         
-        return 0;
+        return 0.0;
     }
     
     public double getCalcioIdeal() {
@@ -101,7 +101,7 @@ public class Planilha {
             return 4.0;
         }
         
-        return 0;
+        return 0.0;
     }
     
     public double getMagnesioIdeal() {
@@ -111,7 +111,7 @@ public class Planilha {
             return 1.0;
         }
         
-        return 0;
+        return 0.0;
     }
     
     public double getEnxofreIdeal() {
@@ -121,6 +121,10 @@ public class Planilha {
             return 6.0;
         }
         
-        return 0;
+        return 0.0;
+    }
+    
+    public double getAluminioIdeal() {        
+        return 0.0;
     }
 }
