@@ -73,4 +73,14 @@ public class Planilha {
     public double getAcidezPotencial() {
         return this.acidezPotencial;
     }
+    
+    public double getFosforoIdeal() {
+        if (this.texturaSolo == 1) {
+            return 9.0;
+        } else if (this.texturaSolo == 2) {
+            return 12.0;
+        }
+        
+        return 0;
+    }
 }
