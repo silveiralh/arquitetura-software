@@ -103,4 +103,14 @@ public class Planilha {
         
         return 0;
     }
+    
+    public double getMagnesioIdeal() {
+        if (this.texturaSolo == 1) {
+            return 1.5;
+        } else if (this.texturaSolo == 2) {
+            return 1.0;
+        }
+        
+        return 0;
+    }
 }
