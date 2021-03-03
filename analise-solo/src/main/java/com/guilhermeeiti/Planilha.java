@@ -83,4 +83,14 @@ public class Planilha {
         
         return 0;
     }
+
+    public double getPotassioIdeal() {
+        if (this.texturaSolo == 1) {
+            return 0.35;
+        } else if (this.texturaSolo == 2) {
+            return 0.25;
+        }
+        
+        return 0;
+    }
 }
