@@ -113,4 +113,14 @@ public class Planilha {
         
         return 0;
     }
+    
+    public double getEnxofreIdeal() {
+        if (this.texturaSolo == 1) {
+            return 9.0;
+        } else if (this.texturaSolo == 2) {
+            return 6.0;
+        }
+        
+        return 0;
+    }
 }
