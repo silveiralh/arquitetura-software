@@ -93,4 +93,14 @@ public class Planilha {
         
         return 0;
     }
+    
+    public double getCalcioIdeal() {
+        if (this.texturaSolo == 1) {
+            return 6.0;
+        } else if (this.texturaSolo == 2) {
+            return 4.0;
+        }
+        
+        return 0;
+    }
 }
