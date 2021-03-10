@@ -69,4 +69,24 @@ public class PlanilhaTest
         
         assertEquals(resultadoEsperado, resultado, 0);
     }
+      
+    public void testDeveRetornarMagnesioIdealIgualA1Ponto5() {
+        Planilha planilha = new Planilha();
+        planilha.setTexturaSolo(1);
+        double resultadoEsperado = 1.5;
+        
+        double resultado = planilha.getMagnesioIdeal();
+        
+        assertEquals(resultadoEsperado, resultado, 0);
+    }
+     
+      public void testDeveRetornarCalcioIdealIgualA1() {
+        Planilha planilha = new Planilha();
+        planilha.setTexturaSolo(2);
+        double resultadoEsperado = 1.0;
+        
+        double resultado = planilha.getMagnesioIdeal();
+        
+        assertEquals(resultadoEsperado, resultado, 0);
+    }
 }
