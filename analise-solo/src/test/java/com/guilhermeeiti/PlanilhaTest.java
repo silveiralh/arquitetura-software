@@ -50,4 +50,23 @@ public class PlanilhaTest
         assertEquals(resultadoEsperado, resultado, 0);
     }
 
+    public void testDeveRetornarCalcioIdealIgualA6() {
+        Planilha planilha = new Planilha();
+        planilha.setTexturaSolo(1);
+        double resultadoEsperado = 6.0;
+        
+        double resultado = planilha.getCalcioIdeal();
+        
+        assertEquals(resultadoEsperado, resultado, 0);
+    }
+     
+      public void testDeveRetornarCalcioIdealIgualA4() {
+        Planilha planilha = new Planilha();
+        planilha.setTexturaSolo(2);
+        double resultadoEsperado = 4.0;
+        
+        double resultado = planilha.getCalcioIdeal();
+        
+        assertEquals(resultadoEsperado, resultado, 0);
+    }
 }
