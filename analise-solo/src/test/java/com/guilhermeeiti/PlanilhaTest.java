@@ -100,12 +100,21 @@ public class PlanilhaTest
         assertEquals(resultadoEsperado, resultado, 0);
     }
      
-    public void testDeveRetornarEnxofrerIdealIgualA6() {
+    public void testDeveRetornarEnxofreIdealIgualA6() {
         Planilha planilha = new Planilha();
         planilha.setTexturaSolo(2);
         double resultadoEsperado = 6.0;
         
         double resultado = planilha.getEnxofreIdeal();
+        
+        assertEquals(resultadoEsperado, resultado, 0);
+    }
+    
+    public void testDeveRetornarAluminioIdealIgualA0() {
+        Planilha planilha = new Planilha();
+        double resultadoEsperado = 0.0;
+        
+        double resultado = planilha.getAluminioIdeal();
         
         assertEquals(resultadoEsperado, resultado, 0);
     }
