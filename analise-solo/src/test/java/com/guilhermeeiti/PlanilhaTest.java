@@ -80,12 +80,32 @@ public class PlanilhaTest
         assertEquals(resultadoEsperado, resultado, 0);
     }
      
-      public void testDeveRetornarCalcioIdealIgualA1() {
+    public void testDeveRetornarCalcioIdealIgualA1() {
         Planilha planilha = new Planilha();
         planilha.setTexturaSolo(2);
         double resultadoEsperado = 1.0;
         
         double resultado = planilha.getMagnesioIdeal();
+        
+        assertEquals(resultadoEsperado, resultado, 0);
+    }
+    
+    public void testDeveRetornarEnxofreIdealIgualA9() {
+        Planilha planilha = new Planilha();
+        planilha.setTexturaSolo(1);
+        double resultadoEsperado = 9.0;
+        
+        double resultado = planilha.getEnxofreIdeal();
+        
+        assertEquals(resultadoEsperado, resultado, 0);
+    }
+     
+    public void testDeveRetornarEnxofrerIdealIgualA6() {
+        Planilha planilha = new Planilha();
+        planilha.setTexturaSolo(2);
+        double resultadoEsperado = 6.0;
+        
+        double resultado = planilha.getEnxofreIdeal();
         
         assertEquals(resultadoEsperado, resultado, 0);
     }
