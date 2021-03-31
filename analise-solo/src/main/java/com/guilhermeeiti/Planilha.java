@@ -9,8 +9,9 @@ public class Planilha {
     private double enxofre;
     private double aluminio;
     private double acidezPotencial;
+    private double mo;
     
-    public Planilha(TexturaSolo texturaSolo, double fosforo, double potassio, double calcio, double magnesio, double enxofre, double aluminio, double acidezPotencial) {
+    public Planilha(TexturaSolo texturaSolo, double fosforo, double potassio, double calcio, double magnesio, double enxofre, double aluminio, double acidezPotencial, double mo) {
         this.texturaSolo = texturaSolo;
         this.fosforo = fosforo;
         this.potassio = potassio;
@@ -19,6 +20,7 @@ public class Planilha {
         this.enxofre = enxofre;
         this.aluminio = aluminio;
         this.acidezPotencial = acidezPotencial;
+        this.mo = mo;
     }
     
     public TexturaSolo getTexturaSolo() {
@@ -120,7 +122,11 @@ public class Planilha {
         return (getSomaBase() + getAcidezPotencial());
     }
     
-    public double getSaturacaoPorBase() {
+    public double getSaturacaoPorBases() {
         return (100 * getSomaBase() / getCTCTotal());
+    }
+    
+    public double getMOPercentual() {
+        return (this.mo / 10);
     }
 }

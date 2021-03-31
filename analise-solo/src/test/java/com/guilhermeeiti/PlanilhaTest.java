@@ -12,7 +12,7 @@ public class PlanilhaTest
 {
     // Teste realizado com base nos valores do exemplo de planilha preenchida numero 3
     public void testValoresIdeaisArgiloso() {
-        Planilha planilha = new Planilha(TexturaSolo.ARGILOSO, 10.23, 0.82, 12.45, 3.47, 1.10, 0.00, 5.15);
+        Planilha planilha = new Planilha(TexturaSolo.ARGILOSO, 10.23, 0.82, 12.45, 3.47, 1.10, 0.00, 5.15, 30.7);
         
         assertEquals(9.0, planilha.getFosforoIdeal(), 0);
         assertEquals(0.35, planilha.getPotassioIdeal(), 0);
@@ -23,7 +23,7 @@ public class PlanilhaTest
     }
     
     public void testValoresIdeaisTexturaMedia() {
-        Planilha planilha = new Planilha(TexturaSolo.TEXTURA_MEDIA, 10.23, 0.82, 12.45, 3.47, 1.10, 0.00, 5.15);
+        Planilha planilha = new Planilha(TexturaSolo.TEXTURA_MEDIA, 10.23, 0.82, 12.45, 3.47, 1.10, 0.00, 5.15, 30.7);
         
         assertEquals(12.0, planilha.getFosforoIdeal(), 0);
         assertEquals(0.25, planilha.getPotassioIdeal(), 0);
@@ -34,20 +34,26 @@ public class PlanilhaTest
     }
     
     public void testSomaBase() {
-        Planilha planilha = new Planilha(TexturaSolo.TEXTURA_MEDIA, 10.23, 0.82, 12.45, 3.47, 1.10, 0.00, 5.15);
+        Planilha planilha = new Planilha(TexturaSolo.TEXTURA_MEDIA, 10.23, 0.82, 12.45, 3.47, 1.10, 0.00, 5.15, 30.7);
         
         assertEquals(16.74, planilha.getSomaBase(), 0);
     }
     
     public void testCTCTotal() {
-        Planilha planilha = new Planilha(TexturaSolo.TEXTURA_MEDIA, 10.23, 0.82, 12.45, 3.47, 1.10, 0.00, 5.15);
+        Planilha planilha = new Planilha(TexturaSolo.TEXTURA_MEDIA, 10.23, 0.82, 12.45, 3.47, 1.10, 0.00, 5.15, 30.7);
         
         assertEquals(21.89, planilha.getCTCTotal(), 0);
     }
     
-    public void testSaturacaoPorBase() {
-        Planilha planilha = new Planilha(TexturaSolo.TEXTURA_MEDIA, 10.23, 0.82, 12.45, 3.47, 1.10, 0.00, 5.15);
+    public void testSaturacaoPorBases() {
+        Planilha planilha = new Planilha(TexturaSolo.TEXTURA_MEDIA, 10.23, 0.82, 12.45, 3.47, 1.10, 0.00, 5.15, 30.7);
         
-        assertEquals(76.47327546825034, planilha.getSaturacaoPorBase(), 0);
+        assertEquals(76.47327546825034, planilha.getSaturacaoPorBases(), 0);
+    }
+    
+    public void testMOPercentual() {
+        Planilha planilha = new Planilha(TexturaSolo.TEXTURA_MEDIA, 10.23, 0.82, 12.45, 3.47, 1.10, 0.00, 5.15, 30.7);
+        
+        assertEquals(3.07, planilha.getMOPercentual(), 0);
     }
 }
