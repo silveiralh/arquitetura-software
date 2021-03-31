@@ -119,4 +119,8 @@ public class Planilha {
     public double getCTCTotal() {
         return (getSomaBase() + getAcidezPotencial());
     }
+    
+    public double getSaturacaoPorBase() {
+        return (100 * getSomaBase() / getCTCTotal());
+    }
 }
