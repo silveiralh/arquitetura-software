@@ -111,4 +111,8 @@ public class Planilha {
     public double getAluminioIdeal() {        
         return 0.0;
     }
+    
+    public double getSomaBase() {
+        return (this.potassio + this.calcio + this.magnesio);
+    }
 }
