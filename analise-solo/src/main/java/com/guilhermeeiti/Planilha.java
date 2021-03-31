@@ -10,64 +10,43 @@ public class Planilha {
     private double aluminio;
     private double acidezPotencial;
     
-    public void setTexturaSolo(TexturaSolo texturaSolo) {
+    public Planilha(TexturaSolo texturaSolo, double fosforo, double potassio, double calcio, double magnesio, double enxofre, double aluminio, double acidezPotencial) {
         this.texturaSolo = texturaSolo;
+        this.fosforo = fosforo;
+        this.potassio = potassio;
+        this.calcio = calcio;
+        this.magnesio = magnesio;
+        this.enxofre = enxofre;
+        this.aluminio = aluminio;
+        this.acidezPotencial = acidezPotencial;
     }
     
     public TexturaSolo getTexturaSolo() {
         return this.texturaSolo;
     }
     
-    public void setFosforo(double fosforo) {
-        this.fosforo = fosforo;
-    }
-    
     public double getFosforo() {
         return this.fosforo;
     }
     
-    public void setPotassio(double potassio) {
-        this.potassio = potassio;
-    }
-    
     public double getPotassio() {
         return this.potassio;
-    }
-        
-    public void setCalcio(double calcio) {
-        this.calcio = calcio;
     }
     
     public double getCalcio() {
         return this.calcio;
     }
     
-    public void setMagnesio(double magnesio) {
-        this.magnesio = magnesio;
-    }
-    
     public double getMagnesio() {
         return this.magnesio;
-    }
-    
-    public void setEnxofre(double enxofre) {
-        this.enxofre = enxofre;
     }
     
     public double getEnxofre() {
         return this.enxofre;
     }
     
-    public void setAluminio(double aluminio) {
-        this.aluminio = aluminio;
-    }
-    
     public double getAluminio() {
         return this.aluminio;
-    }
-        
-    public void setAcidezPotencial(double acidezPotencial) {
-        this.acidezPotencial = acidezPotencial;
     }
     
     public double getAcidezPotencial() {

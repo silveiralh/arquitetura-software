@@ -10,112 +10,26 @@ import junit.framework.TestSuite;
 public class PlanilhaTest 
     extends TestCase
 {
-    public void testDeveRetornarFosforoIdealIgualA9() {
-        Planilha planilha = new Planilha();
-        planilha.setTexturaSolo(TexturaSolo.ARGILOSO);
-        double resultadoEsperado = 9.0;
+    // Teste realizado com base nos valores do exemplo de planilha preenchida numero 3
+    public void testValoresIdeaisArgiloso() {
+        Planilha planilha = new Planilha(TexturaSolo.ARGILOSO, 10.23, 0.82, 12.45, 3.47, 1.10, 0.00, 5.15);
         
-        double resultado = planilha.getFosforoIdeal();
-        
-        assertEquals(resultadoEsperado, resultado, 0);
+        assertEquals(9.0, planilha.getFosforoIdeal(), 0);
+        assertEquals(0.35, planilha.getPotassioIdeal(), 0);
+        assertEquals(6.0, planilha.getCalcioIdeal(), 0);
+        assertEquals(1.5, planilha.getMagnesioIdeal(), 0);
+        assertEquals(9.0, planilha.getEnxofreIdeal(), 0);
+        assertEquals(0.0, planilha.getAluminioIdeal(), 0);
     }
     
-    public void testDeveRetornarFosforoIdealIgualA12() {
-        Planilha planilha = new Planilha();
-        planilha.setTexturaSolo(TexturaSolo.TEXTURA_MEDIA);
-        double resultadoEsperado = 12.0;
+    public void testValoresIdeaisTexturaMedia() {
+        Planilha planilha = new Planilha(TexturaSolo.TEXTURA_MEDIA, 10.23, 0.82, 12.45, 3.47, 1.10, 0.00, 5.15);
         
-        double resultado = planilha.getFosforoIdeal();
-        
-        assertEquals(resultadoEsperado, resultado, 0);
-    }
-    
-    public void testDeveRetornarPotassioIdealIgualA035() {
-        Planilha planilha = new Planilha();
-        planilha.setTexturaSolo(TexturaSolo.ARGILOSO);
-        double resultadoEsperado = 0.35;
-        
-        double resultado = planilha.getPotassioIdeal();
-        
-        assertEquals(resultadoEsperado, resultado, 0);
-    }
-     
-      public void testDeveRetornarPotassioIdealIgualA025() {
-        Planilha planilha = new Planilha();
-        planilha.setTexturaSolo(TexturaSolo.TEXTURA_MEDIA);
-        double resultadoEsperado = 0.25;
-        
-        double resultado = planilha.getPotassioIdeal();
-        
-        assertEquals(resultadoEsperado, resultado, 0);
-    }
-
-    public void testDeveRetornarCalcioIdealIgualA6() {
-        Planilha planilha = new Planilha();
-        planilha.setTexturaSolo(TexturaSolo.ARGILOSO);
-        double resultadoEsperado = 6.0;
-        
-        double resultado = planilha.getCalcioIdeal();
-        
-        assertEquals(resultadoEsperado, resultado, 0);
-    }
-     
-      public void testDeveRetornarCalcioIdealIgualA4() {
-        Planilha planilha = new Planilha();
-        planilha.setTexturaSolo(TexturaSolo.TEXTURA_MEDIA);
-        double resultadoEsperado = 4.0;
-        
-        double resultado = planilha.getCalcioIdeal();
-        
-        assertEquals(resultadoEsperado, resultado, 0);
-    }
-      
-    public void testDeveRetornarMagnesioIdealIgualA1Ponto5() {
-        Planilha planilha = new Planilha();
-        planilha.setTexturaSolo(TexturaSolo.ARGILOSO);
-        double resultadoEsperado = 1.5;
-        
-        double resultado = planilha.getMagnesioIdeal();
-        
-        assertEquals(resultadoEsperado, resultado, 0);
-    }
-     
-    public void testDeveRetornarCalcioIdealIgualA1() {
-        Planilha planilha = new Planilha();
-        planilha.setTexturaSolo(TexturaSolo.TEXTURA_MEDIA);
-        double resultadoEsperado = 1.0;
-        
-        double resultado = planilha.getMagnesioIdeal();
-        
-        assertEquals(resultadoEsperado, resultado, 0);
-    }
-    
-    public void testDeveRetornarEnxofreIdealIgualA9() {
-        Planilha planilha = new Planilha();
-        planilha.setTexturaSolo(TexturaSolo.ARGILOSO);
-        double resultadoEsperado = 9.0;
-        
-        double resultado = planilha.getEnxofreIdeal();
-        
-        assertEquals(resultadoEsperado, resultado, 0);
-    }
-     
-    public void testDeveRetornarEnxofreIdealIgualA6() {
-        Planilha planilha = new Planilha();
-        planilha.setTexturaSolo(TexturaSolo.TEXTURA_MEDIA);
-        double resultadoEsperado = 6.0;
-        
-        double resultado = planilha.getEnxofreIdeal();
-        
-        assertEquals(resultadoEsperado, resultado, 0);
-    }
-    
-    public void testDeveRetornarAluminioIdealIgualA0() {
-        Planilha planilha = new Planilha();
-        double resultadoEsperado = 0.0;
-        
-        double resultado = planilha.getAluminioIdeal();
-        
-        assertEquals(resultadoEsperado, resultado, 0);
+        assertEquals(12.0, planilha.getFosforoIdeal(), 0);
+        assertEquals(0.25, planilha.getPotassioIdeal(), 0);
+        assertEquals(4.0, planilha.getCalcioIdeal(), 0);
+        assertEquals(1.0, planilha.getMagnesioIdeal(), 0);
+        assertEquals(6.0, planilha.getEnxofreIdeal(), 0);
+        assertEquals(0.0, planilha.getAluminioIdeal(), 0);
     }
 }
