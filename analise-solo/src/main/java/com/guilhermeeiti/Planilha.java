@@ -129,4 +129,8 @@ public class Planilha {
     public double getMOPercentual() {
         return (this.mo / 10);
     }
+    
+    public double getCarbono() {
+        return (10 * (getMOPercentual() / 1.72));
+    }
 }

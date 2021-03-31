@@ -56,4 +56,10 @@ public class PlanilhaTest
         
         assertEquals(3.07, planilha.getMOPercentual(), 0);
     }
+    
+     public void testCarbono() {
+        Planilha planilha = new Planilha(TexturaSolo.TEXTURA_MEDIA, 10.23, 0.82, 12.45, 3.47, 1.10, 0.00, 5.15, 30.7);
+        
+        assertEquals(17.848837209302324, planilha.getCarbono(), 0);
+    }
 }
