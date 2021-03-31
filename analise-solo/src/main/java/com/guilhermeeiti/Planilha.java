@@ -1,7 +1,7 @@
 package com.guilhermeeiti;
 
 public class Planilha {
-    private int texturaSolo;
+    private TexturaSolo texturaSolo;
     private double fosforo;
     private double potassio;
     private double calcio;
@@ -10,11 +10,11 @@ public class Planilha {
     private double aluminio;
     private double acidezPotencial;
     
-    public void setTexturaSolo(int texturaSolo) {
+    public void setTexturaSolo(TexturaSolo texturaSolo) {
         this.texturaSolo = texturaSolo;
     }
     
-    public double getTexturaSolo() {
+    public TexturaSolo getTexturaSolo() {
         return this.texturaSolo;
     }
     
@@ -75,53 +75,58 @@ public class Planilha {
     }
     
     public double getFosforoIdeal() {
-        if (this.texturaSolo == 1) {
-            return 9.0;
-        } else if (this.texturaSolo == 2) {
-            return 12.0;
+        switch(this.texturaSolo) {
+            case ARGILOSO:
+                return 9.0;
+            case TEXTURA_MEDIA:
+                return 12.0;
+            default:
+                return 0.0;   
         }
-        
-        return 0.0;
     }
 
-    public double getPotassioIdeal() {
-        if (this.texturaSolo == 1) {
-            return 0.35;
-        } else if (this.texturaSolo == 2) {
-            return 0.25;
+    public double getPotassioIdeal() {  
+        switch(this.texturaSolo) {
+            case ARGILOSO:
+                return 0.35;
+            case TEXTURA_MEDIA:
+                return 0.25;
+            default:
+                return 0.0;
         }
-        
-        return 0.0;
     }
     
-    public double getCalcioIdeal() {
-        if (this.texturaSolo == 1) {
-            return 6.0;
-        } else if (this.texturaSolo == 2) {
-            return 4.0;
+    public double getCalcioIdeal() {        
+        switch(this.texturaSolo) {
+            case ARGILOSO:
+                return 6.0;
+            case TEXTURA_MEDIA:
+                return 4.0;
+            default:
+                return 0.0;
         }
-        
-        return 0.0;
     }
     
     public double getMagnesioIdeal() {
-        if (this.texturaSolo == 1) {
-            return 1.5;
-        } else if (this.texturaSolo == 2) {
-            return 1.0;
+        switch(this.texturaSolo) {
+            case ARGILOSO:
+                return 1.5;
+            case TEXTURA_MEDIA:
+                return 1.0;
+            default:
+                return 0.0;
         }
-        
-        return 0.0;
     }
     
     public double getEnxofreIdeal() {
-        if (this.texturaSolo == 1) {
-            return 9.0;
-        } else if (this.texturaSolo == 2) {
-            return 6.0;
+        switch(this.texturaSolo) {
+            case ARGILOSO:
+                return 9.0;
+            case TEXTURA_MEDIA:
+                return 6.0;
+            default:
+                return 0.0;
         }
-        
-        return 0.0;
     }
     
     public double getAluminioIdeal() {        

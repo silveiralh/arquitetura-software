@@ -12,7 +12,7 @@ public class PlanilhaTest
 {
     public void testDeveRetornarFosforoIdealIgualA9() {
         Planilha planilha = new Planilha();
-        planilha.setTexturaSolo(1);
+        planilha.setTexturaSolo(TexturaSolo.ARGILOSO);
         double resultadoEsperado = 9.0;
         
         double resultado = planilha.getFosforoIdeal();
@@ -22,7 +22,7 @@ public class PlanilhaTest
     
     public void testDeveRetornarFosforoIdealIgualA12() {
         Planilha planilha = new Planilha();
-        planilha.setTexturaSolo(2);
+        planilha.setTexturaSolo(TexturaSolo.TEXTURA_MEDIA);
         double resultadoEsperado = 12.0;
         
         double resultado = planilha.getFosforoIdeal();
@@ -32,7 +32,7 @@ public class PlanilhaTest
     
     public void testDeveRetornarPotassioIdealIgualA035() {
         Planilha planilha = new Planilha();
-        planilha.setTexturaSolo(1);
+        planilha.setTexturaSolo(TexturaSolo.ARGILOSO);
         double resultadoEsperado = 0.35;
         
         double resultado = planilha.getPotassioIdeal();
@@ -42,7 +42,7 @@ public class PlanilhaTest
      
       public void testDeveRetornarPotassioIdealIgualA025() {
         Planilha planilha = new Planilha();
-        planilha.setTexturaSolo(2);
+        planilha.setTexturaSolo(TexturaSolo.TEXTURA_MEDIA);
         double resultadoEsperado = 0.25;
         
         double resultado = planilha.getPotassioIdeal();
@@ -52,7 +52,7 @@ public class PlanilhaTest
 
     public void testDeveRetornarCalcioIdealIgualA6() {
         Planilha planilha = new Planilha();
-        planilha.setTexturaSolo(1);
+        planilha.setTexturaSolo(TexturaSolo.ARGILOSO);
         double resultadoEsperado = 6.0;
         
         double resultado = planilha.getCalcioIdeal();
@@ -62,7 +62,7 @@ public class PlanilhaTest
      
       public void testDeveRetornarCalcioIdealIgualA4() {
         Planilha planilha = new Planilha();
-        planilha.setTexturaSolo(2);
+        planilha.setTexturaSolo(TexturaSolo.TEXTURA_MEDIA);
         double resultadoEsperado = 4.0;
         
         double resultado = planilha.getCalcioIdeal();
@@ -72,7 +72,7 @@ public class PlanilhaTest
       
     public void testDeveRetornarMagnesioIdealIgualA1Ponto5() {
         Planilha planilha = new Planilha();
-        planilha.setTexturaSolo(1);
+        planilha.setTexturaSolo(TexturaSolo.ARGILOSO);
         double resultadoEsperado = 1.5;
         
         double resultado = planilha.getMagnesioIdeal();
@@ -82,7 +82,7 @@ public class PlanilhaTest
      
     public void testDeveRetornarCalcioIdealIgualA1() {
         Planilha planilha = new Planilha();
-        planilha.setTexturaSolo(2);
+        planilha.setTexturaSolo(TexturaSolo.TEXTURA_MEDIA);
         double resultadoEsperado = 1.0;
         
         double resultado = planilha.getMagnesioIdeal();
@@ -92,7 +92,7 @@ public class PlanilhaTest
     
     public void testDeveRetornarEnxofreIdealIgualA9() {
         Planilha planilha = new Planilha();
-        planilha.setTexturaSolo(1);
+        planilha.setTexturaSolo(TexturaSolo.ARGILOSO);
         double resultadoEsperado = 9.0;
         
         double resultado = planilha.getEnxofreIdeal();
@@ -102,7 +102,7 @@ public class PlanilhaTest
      
     public void testDeveRetornarEnxofreIdealIgualA6() {
         Planilha planilha = new Planilha();
-        planilha.setTexturaSolo(2);
+        planilha.setTexturaSolo(TexturaSolo.TEXTURA_MEDIA);
         double resultadoEsperado = 6.0;
         
         double resultado = planilha.getEnxofreIdeal();
