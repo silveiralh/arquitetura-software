@@ -38,4 +38,10 @@ public class PlanilhaTest
         
         assertEquals(16.74, planilha.getSomaBase(), 0);
     }
+    
+    public void testCTCTotal() {
+        Planilha planilha = new Planilha(TexturaSolo.TEXTURA_MEDIA, 10.23, 0.82, 12.45, 3.47, 1.10, 0.00, 5.15);
+        
+        assertEquals(21.89, planilha.getCTCTotal(), 0);
+    }
 }

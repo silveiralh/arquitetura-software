@@ -115,4 +115,8 @@ public class Planilha {
     public double getSomaBase() {
         return (this.potassio + this.calcio + this.magnesio);
     }
+
+    public double getCTCTotal() {
+        return (getSomaBase() + getAcidezPotencial());
+    }
 }
