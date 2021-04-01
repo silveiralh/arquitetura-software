@@ -57,10 +57,10 @@ public class CorrecaoFosforo {
   
   public ItemCorrecaoFosforo getItemCorrecaoFosforo() {   
     switch(this.fonteFosforo) {
-        case YOORIN: 
-            return new ItemCorrecaoFosforo("Enxofre", this.getQuantidadeAplicar() * 0.15);
-        case SUPERFOSFATO_SIMPLES:
-            return new ItemCorrecaoFosforo("Magnesio", (((this.getQuantidadeAplicar() * 2.42) * 0.1) / 2.42));
+        case SUPERFOSFATO_SIMPLES: 
+            return new ItemCorrecaoFosforo("Enxofre", (((this.getQuantidadeAplicar() * 2.42) * 0.1) / 2.42));
+        case YOORIN:
+            return new ItemCorrecaoFosforo("Magnesio", this.getQuantidadeAplicar() * 0.15);
         case MULTIF_MAGNESIANO:
             return new ItemCorrecaoFosforo("Enxofre", (((this.getQuantidadeAplicar() * 2.42) * 0.11) / 2.42));
         default: 
@@ -71,29 +71,29 @@ public class CorrecaoFosforo {
   public ItemCorrecaoFosforo getItemCorrecaoFosforo2() {   
     switch(this.fonteFosforo) {
         case SUPERFOSFATO_SIMPLES:
-            return new ItemCorrecaoFosforo("Calcio", (this.getQuantidadeAplicar() * 2.42) * 0.28);
+            return new ItemCorrecaoFosforo("Calcio", ((this.getQuantidadeAplicar() * 2.42) * 0.28) / 2.42);
         case SUPERFOSFATO_TRIPLO:
-            return new ItemCorrecaoFosforo("Calcio", (this.getQuantidadeAplicar() * 2.42) * 0.2);
+            return new ItemCorrecaoFosforo("Calcio", ((this.getQuantidadeAplicar() * 2.42) * 0.2) / 2.42);
         case MAP:
-            return new ItemCorrecaoFosforo("Nitrogenio", (this.getQuantidadeAplicar() * 2.42) * 0.09);
+            return new ItemCorrecaoFosforo("Nitrogenio", ((this.getQuantidadeAplicar() * 2.42) * 0.09) / 2.42);
         case DAP:
-            return new ItemCorrecaoFosforo("Nitrogenio", (this.getQuantidadeAplicar() * 2.42) * 0.16);
+            return new ItemCorrecaoFosforo("Nitrogenio", ((this.getQuantidadeAplicar() * 2.42) * 0.16) / 2.42);
         case YOORIN: 
-            return new ItemCorrecaoFosforo("Calcio", (this.getQuantidadeAplicar() * 2.42) * 0.28);
+            return new ItemCorrecaoFosforo("Calcio", ((this.getQuantidadeAplicar() * 2.42) * 0.28) / 2.42);
         case FOSFATO_ARAD: 
-            return new ItemCorrecaoFosforo("Calcio", (this.getQuantidadeAplicar() * 2.42) * 0.52);
+            return new ItemCorrecaoFosforo("Calcio", ((this.getQuantidadeAplicar() * 2.42) * 0.52) / 2.42);
         case FOSFATO_GAFSA: 
-            return new ItemCorrecaoFosforo("Calcio", (this.getQuantidadeAplicar() * 2.42) * 0.52);
+            return new ItemCorrecaoFosforo("Calcio", ((this.getQuantidadeAplicar() * 2.42) * 0.52) / 2.42);
         case FOSFATO_DAOUI: 
-            return new ItemCorrecaoFosforo("Calcio", (this.getQuantidadeAplicar() * 2.42) * 0.45);
+            return new ItemCorrecaoFosforo("Calcio", ((this.getQuantidadeAplicar() * 2.42) * 0.45) / 2.42);
         case FOSF_PATOS_MINAS: 
-            return new ItemCorrecaoFosforo("Calcio", (this.getQuantidadeAplicar() * 2.42) * 0.28);
+            return new ItemCorrecaoFosforo("Calcio", ((this.getQuantidadeAplicar() * 2.42) * 0.28) / 2.42);
         case ESCORIA_DE_THOMAS: 
-            return new ItemCorrecaoFosforo("Calcio", (this.getQuantidadeAplicar() * 2.42) * 0.44);
+            return new ItemCorrecaoFosforo("Calcio", ((this.getQuantidadeAplicar() * 2.42) * 0.44) / 2.42);
         case ACIDO_FOSFORICO: 
             return new ItemCorrecaoFosforo("", 0.00);
         case MULTIF_MAGNESIANO:
-               return new ItemCorrecaoFosforo("", (this.getQuantidadeAplicar() * 2.42) * 0.18);
+               return new ItemCorrecaoFosforo("CALCIO", ((this.getQuantidadeAplicar() * 2.42) * 0.18) / 2.42);
         default: 
             return null;
     }
