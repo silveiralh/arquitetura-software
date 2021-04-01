@@ -58,6 +58,27 @@ public class CorrecaoPotassio {
        }
     }
     
+    public ItemCorrecaoPotassio getItemCorrecaoPotassio() {   
+        switch(this.fontePotassio) { 
+            case SULFATO_DE_POTASSIO: 
+                return new ItemCorrecaoPotassio("Enxofre", this.getQuantidadeAplicar() * 0.17);   
+            case SULFATO_DE_POTASSIO_E_MAGNESIO: 
+                return new ItemCorrecaoPotassio("Enxofre", this.getQuantidadeAplicar() * 0.22);   
+            default:
+                return null;
+        }
+    }
+    
+    public ItemCorrecaoPotassio getItemCorrecaoPotassio2() {   
+        switch(this.fontePotassio) { 
+            case SULFATO_DE_POTASSIO_E_MAGNESIO: 
+                return new ItemCorrecaoPotassio("Magnesio", this.getQuantidadeAplicar() * 0.18);   
+            default:
+                return null;
+        }
+    }
+    
+    
     public double getNecessidadeAdicionar() {
       return (this.planilha.getPotassio() * this.participacaoCTCDesejada / this.getParticipacaoCTCAtual()) - this.planilha.getPotassio();
     }

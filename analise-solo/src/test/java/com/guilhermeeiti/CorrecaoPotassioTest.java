@@ -5,9 +5,7 @@
  */
 package com.guilhermeeiti;
 
-import junit.framework.Test;
 import junit.framework.TestCase;
-import junit.framework.TestSuite;
 
 /**
  *
@@ -35,5 +33,21 @@ public class CorrecaoPotassioTest
         CorrecaoPotassio correcaoPotassio = new CorrecaoPotassio(planilha, FontePotassio.CLORETO_DE_POTASSIO, 2.8, 1000.00);
         
         assertEquals(401.47531034482756, correcaoPotassio.getCustoHectar(), 0);
+    }
+    
+    public void testItemCorrecaoFosforo() {
+        Planilha planilha = new Planilha(TexturaSolo.ARGILOSO, 8.59, 0.15, 5.76, 1.63, 3.67, 0.00, 5.35, 30.7);
+        CorrecaoPotassio correcaoPotassio = new CorrecaoPotassio(planilha, FontePotassio.SULFATO_DE_POTASSIO, 2.8, 1000.00);
+       
+        assertEquals(76.1258953846154, correcaoPotassio.getItemCorrecaoPotassio().getValor(), 0);
+        assertEquals("Enxofre", correcaoPotassio.getItemCorrecaoPotassio().getNome());
+    }
+    
+    public void testItemCorrecaoFosforo2() {
+        Planilha planilha = new Planilha(TexturaSolo.ARGILOSO, 8.59, 0.15, 5.76, 1.63, 3.67, 0.00, 5.35, 30.7);
+        CorrecaoPotassio correcaoPotassio = new CorrecaoPotassio(planilha, FontePotassio.SULFATO_DE_POTASSIO_E_MAGNESIO, 2.8, 1000.00);
+       
+        assertEquals(190.51828363636366, correcaoPotassio.getItemCorrecaoPotassio2().getValor(), 0);
+        assertEquals("Magnesio", correcaoPotassio.getItemCorrecaoPotassio2().getNome());
     }
 }
