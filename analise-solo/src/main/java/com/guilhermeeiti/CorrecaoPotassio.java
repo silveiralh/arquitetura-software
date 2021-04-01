@@ -36,7 +36,7 @@ public class CorrecaoPotassio {
   }
     
     public double getParticipacaoCTCAtual() {
-        return planilha.getPotassio() / ((planilha.getSomaBase() + planilha.getAcidezPotencial()) * 100);
+        return (planilha.getPotassio() / (planilha.getSomaBase() + planilha.getAcidezPotencial())) * 100;
     }
     
     public double getParticipacaoCTCAposCorrecao() {
@@ -63,7 +63,7 @@ public class CorrecaoPotassio {
     }
     
     public double getQuantidadeAplicar() {      
-        return (((this.getNecessidadeAdicionar() * 39.1 * 10 * 2 * 1.2 * 100) / (85 / 100) / 100) * 100) / getValorFontePotassio();
+        return (this.getNecessidadeAdicionar() * 39.1 * 10 * 2 * 1.2 * 100 / 0.85 / 100) * 100 / getValorFontePotassio();
     }   
     
     public double getCustoHectar() {
