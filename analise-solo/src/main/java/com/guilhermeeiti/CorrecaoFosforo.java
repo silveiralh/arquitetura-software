@@ -10,14 +10,14 @@ package com.guilhermeeiti;
  * @author eiti
  */
 public class CorrecaoFosforo {
-  private Planilha planilha;
+  private Solo solo;
   private FonteFosforo fonteFosforo;   
   private double teorFosforoAtingir;
   private double eficienciaFosforo;
   private double valorTonFosforo;
   
-  CorrecaoFosforo(Planilha planilha, FonteFosforo fonteFosforo, double teorFosforoAtingir, double eficienciaFosforo, double valorTonFosforo) {
-    this.planilha = planilha;
+  CorrecaoFosforo(Solo solo, FonteFosforo fonteFosforo, double teorFosforoAtingir, double eficienciaFosforo, double valorTonFosforo) {
+    this.solo = solo;
     this.fonteFosforo = fonteFosforo;
     this.teorFosforoAtingir = teorFosforoAtingir;
     this.eficienciaFosforo = eficienciaFosforo;
@@ -100,7 +100,7 @@ public class CorrecaoFosforo {
   }
   
   public double getNecessidadeAdicionar() {
-      return (this.teorFosforoAtingir - this.planilha.getFosforo());
+      return (this.teorFosforoAtingir - this.solo.getFosforo());
   }
   
   public double getQuantidadeAplicar() {   

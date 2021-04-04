@@ -10,13 +10,13 @@ package com.guilhermeeiti;
  * @author eiti
  */
 public class CorrecaoPotassio {
-    private Planilha planilha;
+    private Solo solo;
     private FontePotassio fontePotassio;
     private double participacaoCTCDesejada;
     private double valorTonPotassio;
     
-    CorrecaoPotassio(Planilha planilha, FontePotassio fontePotassio, double participacaoCTCDesejada, double valorTonPotassio) {
-        this.planilha = planilha;
+    CorrecaoPotassio(Solo solo, FontePotassio fontePotassio, double participacaoCTCDesejada, double valorTonPotassio) {
+        this.solo = solo;
         this.fontePotassio = fontePotassio;
         this.participacaoCTCDesejada = participacaoCTCDesejada;
         this.valorTonPotassio = valorTonPotassio;
@@ -36,7 +36,7 @@ public class CorrecaoPotassio {
   }
     
     public double getParticipacaoCTCAtual() {
-        return (planilha.getPotassio() / (planilha.getSomaBase() + planilha.getAcidezPotencial())) * 100;
+        return (solo.getPotassio() / (solo.getSomaBase() + solo.getAcidezPotencial())) * 100;
     }
     
     public double getParticipacaoCTCAposCorrecao() {
@@ -48,7 +48,7 @@ public class CorrecaoPotassio {
     }
     
     public double getParticipacaoCTCIdeal() {      
-       switch(planilha.getTexturaSolo()) {
+       switch(solo.getTexturaSolo()) {
            case ARGILOSO:
                return 3.0;
            case TEXTURA_MEDIA:
@@ -80,7 +80,7 @@ public class CorrecaoPotassio {
     
     
     public double getNecessidadeAdicionar() {
-      return (this.planilha.getPotassio() * this.participacaoCTCDesejada / this.getParticipacaoCTCAtual()) - this.planilha.getPotassio();
+      return (this.solo.getPotassio() * this.participacaoCTCDesejada / this.getParticipacaoCTCAtual()) - this.solo.getPotassio();
     }
     
     public double getQuantidadeAplicar() {      

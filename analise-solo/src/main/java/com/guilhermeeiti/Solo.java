@@ -1,6 +1,6 @@
 package com.guilhermeeiti;
 
-public class Planilha {
+public class Solo {
     private TexturaSolo texturaSolo;
     private double fosforo;
     private double potassio;
@@ -11,7 +11,7 @@ public class Planilha {
     private double acidezPotencial;
     private double mo;
     
-    public Planilha(TexturaSolo texturaSolo, double fosforo, double potassio, double calcio, double magnesio, double enxofre, double aluminio, double acidezPotencial, double mo) {
+    public Solo(TexturaSolo texturaSolo, double fosforo, double potassio, double calcio, double magnesio, double enxofre, double aluminio, double acidezPotencial, double mo) {
         this.texturaSolo = texturaSolo;
         this.fosforo = fosforo;
         this.potassio = potassio;
