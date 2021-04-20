@@ -14,3 +14,6 @@ Maven                            1              0              0             22
 SUM:                            16            100             85            786
 -------------------------------------------------------------------------------
 ```
+
+## II - Problemas identificados
+Foi identificado a existência de 13 estruturas condicionais. Sendo 3 estruturas no arquivo "CorrecaoFosforo.java", 5 no "CorrecaoPotassio.java" e 5 no "Solo.java".
