@@ -3,7 +3,11 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package com.guilhermeeiti;
+package com.guilhermeeiti.classes;
+
+import com.guilhermeeiti.enums.FontePotassio;
+import com.guilhermeeiti.classes.ItemCorrecaoPotassio;
+import com.guilhermeeiti.classes.Solo;
 
 /**
  *
@@ -15,7 +19,7 @@ public class CorrecaoPotassio {
     private double participacaoCTCDesejada;
     private double valorTonPotassio;
     
-    CorrecaoPotassio(Solo solo, FontePotassio fontePotassio, double participacaoCTCDesejada, double valorTonPotassio) {
+    public CorrecaoPotassio(Solo solo, FontePotassio fontePotassio, double participacaoCTCDesejada, double valorTonPotassio) {
         this.solo = solo;
         this.fontePotassio = fontePotassio;
         this.participacaoCTCDesejada = participacaoCTCDesejada;

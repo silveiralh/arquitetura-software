@@ -1,4 +1,6 @@
-package com.guilhermeeiti;
+package com.guilhermeeiti.classes;
+
+import com.guilhermeeiti.enums.TexturaSolo;
 
 public class Solo {
     private TexturaSolo texturaSolo;
@@ -58,9 +60,9 @@ public class Solo {
     public double getFosforoIdeal() {
         switch(this.texturaSolo) {
             case ARGILOSO:
-                return 9.0;
+                return new CalculaValorIdeal().getFosforoIdeal(new Argiloso());
             case TEXTURA_MEDIA:
-                return 12.0;
+                return new CalculaValorIdeal().getFosforoIdeal(new TexturaMedia());
             default:
                 return 0.0;   
         }
@@ -69,20 +71,20 @@ public class Solo {
     public double getPotassioIdeal() {  
         switch(this.texturaSolo) {
             case ARGILOSO:
-                return 0.35;
+               return new CalculaValorIdeal().getPotassioIdeal(new Argiloso());
             case TEXTURA_MEDIA:
-                return 0.25;
+               return new CalculaValorIdeal().getPotassioIdeal(new TexturaMedia());
             default:
-                return 0.0;
+               return 0.0;
         }
     }
     
     public double getCalcioIdeal() {        
         switch(this.texturaSolo) {
             case ARGILOSO:
-                return 6.0;
+                return new CalculaValorIdeal().getCalcioIdeal(new Argiloso());
             case TEXTURA_MEDIA:
-                return 4.0;
+                return new CalculaValorIdeal().getCalcioIdeal(new TexturaMedia());
             default:
                 return 0.0;
         }
@@ -91,9 +93,9 @@ public class Solo {
     public double getMagnesioIdeal() {
         switch(this.texturaSolo) {
             case ARGILOSO:
-                return 1.5;
+                return new CalculaValorIdeal().getMagnesioIdeal(new Argiloso());
             case TEXTURA_MEDIA:
-                return 1.0;
+                return new CalculaValorIdeal().getMagnesioIdeal(new TexturaMedia());
             default:
                 return 0.0;
         }
@@ -102,9 +104,9 @@ public class Solo {
     public double getEnxofreIdeal() {
         switch(this.texturaSolo) {
             case ARGILOSO:
-                return 9.0;
+                return new CalculaValorIdeal().getEnxofreIdeal(new Argiloso());
             case TEXTURA_MEDIA:
-                return 6.0;
+                return new CalculaValorIdeal().getEnxofreIdeal(new TexturaMedia());
             default:
                 return 0.0;
         }

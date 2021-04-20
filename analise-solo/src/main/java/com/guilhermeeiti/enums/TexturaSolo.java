@@ -3,20 +3,19 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package com.guilhermeeiti;
+package com.guilhermeeiti.enums;
 
 /**
  *
  * @author eiti
  */
-public enum FontePotassio {
-    CLORETO_DE_POTASSIO(1),
-    SULFATO_DE_POTASSIO(2),
-    SULFATO_DE_POTASSIO_E_MAGNESIO(3);
+public enum TexturaSolo {
+    ARGILOSO(1),
+    TEXTURA_MEDIA(2);
     
     private int codigo;
     
-    FontePotassio(int codigo) {
+    TexturaSolo(int codigo) {
         this.codigo = codigo;
     }
     

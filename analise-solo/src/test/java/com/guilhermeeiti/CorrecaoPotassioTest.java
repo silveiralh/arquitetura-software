@@ -5,6 +5,10 @@
  */
 package com.guilhermeeiti;
 
+import com.guilhermeeiti.classes.CorrecaoPotassio;
+import com.guilhermeeiti.enums.FontePotassio;
+import com.guilhermeeiti.classes.Solo;
+import com.guilhermeeiti.enums.TexturaSolo;
 import junit.framework.TestCase;
 
 /**

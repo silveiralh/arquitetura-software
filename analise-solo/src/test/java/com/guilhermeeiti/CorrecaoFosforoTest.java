@@ -5,6 +5,10 @@
  */
 package com.guilhermeeiti;
 
+import com.guilhermeeiti.classes.CorrecaoFosforo;
+import com.guilhermeeiti.enums.FonteFosforo;
+import com.guilhermeeiti.classes.Solo;
+import com.guilhermeeiti.enums.TexturaSolo;
 import junit.framework.TestCase;
 
 /**

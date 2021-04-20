@@ -3,7 +3,11 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package com.guilhermeeiti;
+package com.guilhermeeiti.classes;
+
+import com.guilhermeeiti.enums.FonteFosforo;
+import com.guilhermeeiti.classes.ItemCorrecaoFosforo;
+import com.guilhermeeiti.classes.Solo;
 
 /**
  *
@@ -16,7 +20,7 @@ public class CorrecaoFosforo {
   private double eficienciaFosforo;
   private double valorTonFosforo;
   
-  CorrecaoFosforo(Solo solo, FonteFosforo fonteFosforo, double teorFosforoAtingir, double eficienciaFosforo, double valorTonFosforo) {
+  public CorrecaoFosforo(Solo solo, FonteFosforo fonteFosforo, double teorFosforoAtingir, double eficienciaFosforo, double valorTonFosforo) {
     this.solo = solo;
     this.fonteFosforo = fonteFosforo;
     this.teorFosforoAtingir = teorFosforoAtingir;
