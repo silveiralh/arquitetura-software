@@ -28,3 +28,18 @@ https://www.baeldung.com/java-replace-if-statements
 Commit: https://github.com/guilhermemiua/arquitetura-software/commit/78d16d6051507d420041cd27640715fbaf4405ee
 
 No commit acima, foi feita a implementação do Enum para substituir as estruturas condicionais encontradas no projeto. Nos Enums de Fontes de Potássio e Fósforo, foi realizado uma alteração para armazenar e retornar o valor da fonte. Com isto, foi eliminando o método das classes CorrecaoFosforo e CorrecaoPotassio que retornava o valor da fonte escolhida usando switch/case. Também foi criado métodos nos Enums para o retorno dos itens da Correção do Fósforo e Potássio, que são sobrescritos nos valores do Enum quando houver a necessidade. Dessa forma, eliminando os switch/case dos métodos de retorno do item de correção. Por fim, na classe CorrecaoPotassio havia um Switch/Case no método getParticipacaoCTCIdeal que foi removido com o armazenamento deste valor no Enum TexturaSolo junto a um método de retorno.
+
+## V - Código após as alterações
+```
+-------------------------------------------------------------------------------
+Language                     files          blank        comment           code
+-------------------------------------------------------------------------------
+Java                            11            109             85            498
+XML                              4              0              0            296
+Maven                            1              0              0             22
+-------------------------------------------------------------------------------
+SUM:                            16            109             85            816
+-------------------------------------------------------------------------------
+```
+
+Após a aplicação das alterações no código do projeto, houve um pequeno aumento na quantidade total de linhas de código. No entanto, todas as estruturas condicionais encontradas nas classes CorrecaoPotassio e CorrecaoFosforo foram removidas. 
