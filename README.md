@@ -21,5 +21,10 @@ Foi identificado a existência de 8 estruturas condicionais. Sendo 3 estruturas 
 ## III - Soluções encontradas
 No link abaixo, é possível visualizar alternativas para substituir as estruturas condicionais em um projeto Java. A alternativa escolhida para aplicação no projeto foi o uso de Enums com métodos sendo sobrescritos.
 
-[https://www.baeldung.com/java-replace-if-statements]
+https://www.baeldung.com/java-replace-if-statements
 
+## IV - Implementação das soluções
+
+Commit: https://github.com/guilhermemiua/arquitetura-software/commit/78d16d6051507d420041cd27640715fbaf4405ee
+
+No commit acima, foi feita a implementação do Enum para substituir as estruturas condicionais encontradas no projeto. Nos Enums de Fontes de Potássio e Fósforo, foi realizado uma alteração para armazenar e retornar o valor da fonte. Com isto, foi eliminando o método das classes CorrecaoFosforo e CorrecaoPotassio que retornava o valor da fonte escolhida usando switch/case. Também foi criado métodos nos Enums para o retorno dos itens da Correção do Fósforo e Potássio, que são sobrescritos nos valores do Enum quando houver a necessidade. Dessa forma, eliminando os switch/case dos métodos de retorno do item de correção.
