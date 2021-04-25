@@ -19,5 +19,7 @@ SUM:                            16            103             85            803
 Foi identificado a existência de 8 estruturas condicionais. Sendo 3 estruturas no arquivo "CorrecaoFosforo.java" e 5 no "CorrecaoPotassio.java".
 
 ## III - Soluções encontradas
+No link abaixo, é possível visualizar alternativas para substituir as estruturas condicionais em um projeto Java. A alternativa escolhida para aplicação no projeto foi o uso de Enums com métodos sendo sobrescritos.
 
+[https://www.baeldung.com/java-replace-if-statements]
 
