@@ -60,31 +60,31 @@ public class Solo {
     public double getFosforoIdeal() {
         switch(this.texturaSolo) {
             case ARGILOSO:
-                return new CalculaValorIdeal().getFosforoIdeal(new Argiloso());
+                return 9.0;
             case TEXTURA_MEDIA:
-                return new CalculaValorIdeal().getFosforoIdeal(new TexturaMedia());
+                return 12.0;
             default:
-                return 0.0;   
+                return 0.0;    
         }
     }
 
     public double getPotassioIdeal() {  
         switch(this.texturaSolo) {
             case ARGILOSO:
-               return new CalculaValorIdeal().getPotassioIdeal(new Argiloso());
+                return 0.35;
             case TEXTURA_MEDIA:
-               return new CalculaValorIdeal().getPotassioIdeal(new TexturaMedia());
+                return 0.25;
             default:
-               return 0.0;
+                return 0.0;
         }
     }
     
     public double getCalcioIdeal() {        
         switch(this.texturaSolo) {
             case ARGILOSO:
-                return new CalculaValorIdeal().getCalcioIdeal(new Argiloso());
+                return 6.0;
             case TEXTURA_MEDIA:
-                return new CalculaValorIdeal().getCalcioIdeal(new TexturaMedia());
+                return 4.0;
             default:
                 return 0.0;
         }
@@ -93,9 +93,9 @@ public class Solo {
     public double getMagnesioIdeal() {
         switch(this.texturaSolo) {
             case ARGILOSO:
-                return new CalculaValorIdeal().getMagnesioIdeal(new Argiloso());
+                return 1.5;
             case TEXTURA_MEDIA:
-                return new CalculaValorIdeal().getMagnesioIdeal(new TexturaMedia());
+                return 1.0;
             default:
                 return 0.0;
         }
@@ -104,9 +104,9 @@ public class Solo {
     public double getEnxofreIdeal() {
         switch(this.texturaSolo) {
             case ARGILOSO:
-                return new CalculaValorIdeal().getEnxofreIdeal(new Argiloso());
+                return 9.0;
             case TEXTURA_MEDIA:
-                return new CalculaValorIdeal().getEnxofreIdeal(new TexturaMedia());
+                return 6.0;
             default:
                 return 0.0;
         }
