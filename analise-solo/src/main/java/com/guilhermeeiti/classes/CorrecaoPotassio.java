@@ -26,60 +26,24 @@ public class CorrecaoPotassio {
         this.valorTonPotassio = valorTonPotassio;
     }
     
-    public double getValorFontePotassio() {
-    switch(this.fontePotassio) {
-        case CLORETO_DE_POTASSIO: 
-            return 58.0;
-        case SULFATO_DE_POTASSIO: 
-            return 52.0;   
-        case SULFATO_DE_POTASSIO_E_MAGNESIO: 
-            return 22.0; 
-        default:
-            return 0.0;
-    }
-  }
-    
     public double getParticipacaoCTCAtual() {
         return (solo.getPotassio() / (solo.getSomaBase() + solo.getAcidezPotencial())) * 100;
     }
     
     public double getParticipacaoCTCAposCorrecao() {
-        if (this.participacaoCTCDesejada > 0.001) {
-            return this.participacaoCTCDesejada;
-        }
-        
-        return 0.0;
+        return this.participacaoCTCDesejada > 0.001 ? this.participacaoCTCDesejada : 0.00;
     }
     
     public double getParticipacaoCTCIdeal() {      
-       switch(solo.getTexturaSolo()) {
-           case ARGILOSO:
-               return 3.0;
-           case TEXTURA_MEDIA:
-               return 3.0;
-           default:
-               return 0.0;
-       }
+       return this.solo.getTexturaSolo().getParticipacaoCTCIdeal();
     }
     
     public ItemCorrecaoPotassio getItemCorrecaoPotassio() {   
-        switch(this.fontePotassio) { 
-            case SULFATO_DE_POTASSIO: 
-                return new ItemCorrecaoPotassio("Enxofre", this.getQuantidadeAplicar() * 0.17);   
-            case SULFATO_DE_POTASSIO_E_MAGNESIO: 
-                return new ItemCorrecaoPotassio("Enxofre", this.getQuantidadeAplicar() * 0.22);   
-            default:
-                return null;
-        }
+        return this.fontePotassio.getItemCorrecaoPotassio(this.getQuantidadeAplicar());
     }
     
     public ItemCorrecaoPotassio getItemCorrecaoPotassio2() {   
-        switch(this.fontePotassio) { 
-            case SULFATO_DE_POTASSIO_E_MAGNESIO: 
-                return new ItemCorrecaoPotassio("Magnesio", this.getQuantidadeAplicar() * 0.18);   
-            default:
-                return null;
-        }
+        return this.fontePotassio.getItemCorrecaoPotassio2(this.getQuantidadeAplicar());
     }
     
     
@@ -88,7 +52,7 @@ public class CorrecaoPotassio {
     }
     
     public double getQuantidadeAplicar() {      
-        return (this.getNecessidadeAdicionar() * 39.1 * 10 * 2 * 1.2 * 100 / 0.85 / 100) * 100 / getValorFontePotassio();
+        return (this.getNecessidadeAdicionar() * 39.1 * 10 * 2 * 1.2 * 100 / 0.85 / 100) * 100 / this.fontePotassio.getValor();
     }   
     
     public double getCustoHectar() {

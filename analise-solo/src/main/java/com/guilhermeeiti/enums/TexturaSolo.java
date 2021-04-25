@@ -10,16 +10,22 @@ package com.guilhermeeiti.enums;
  * @author eiti
  */
 public enum TexturaSolo {
-    ARGILOSO(1),
-    TEXTURA_MEDIA(2);
+    ARGILOSO(1, 3.0),
+    TEXTURA_MEDIA(2, 3.0);
     
     private int codigo;
+    private double participacaoCTCIdeal;
     
-    TexturaSolo(int codigo) {
+    TexturaSolo(int codigo, double participacaoCTCIdeal) {
         this.codigo = codigo;
+        this.participacaoCTCIdeal = participacaoCTCIdeal;
     }
     
-    int getCodigo() {
+    public int getCodigo() {
         return this.codigo;
     }
+    
+    public double getParticipacaoCTCIdeal() {
+        return this.participacaoCTCIdeal;
+    }    
 }

@@ -13,7 +13,7 @@ public class ItemCorrecaoFosforo {
     private String nome;
     private double valor;
     
-    ItemCorrecaoFosforo(String nome, double valor) {
+    public ItemCorrecaoFosforo(String nome, double valor) {
         this.nome = nome;
         this.valor = valor;
     }

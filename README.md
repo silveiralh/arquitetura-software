@@ -20,3 +20,4 @@ Foi identificado a existência de 8 estruturas condicionais. Sendo 3 estruturas 
 
 ## III - Soluções encontradas
 
+
