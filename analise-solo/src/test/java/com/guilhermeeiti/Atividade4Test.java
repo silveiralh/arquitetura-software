@@ -2,15 +2,16 @@ package com.guilhermeeiti;
 
 import static org.junit.Assert.*;
 
+import com.guilhermeeiti.classes.CorrecaoFosforo;
 import com.guilhermeeiti.classes.Solo;
+import com.guilhermeeiti.enums.FonteFosforo;
 import com.guilhermeeiti.enums.TexturaSolo;
 
 public class Atividade4Test {
-
+	Solo solo =  new Solo(TexturaSolo.ARGILOSO, 8.59, 0.15, 5.76, 1.63, 3.67, 0.00, 5.35, 30.7);
+	CorrecaoFosforo correcaoFosforo = new CorrecaoFosforo(solo, FonteFosforo.SUPERFOSFATO_SIMPLES, 12, 70, 1260.00);
 	@org.junit.Test
 	public void testTeoresDoSolo() {
-		
-		Solo solo =  new Solo(TexturaSolo.ARGILOSO, 8.59, 0.15, 5.76, 1.63, 3.67, 0.00, 5.35, 30.7);
 		
 		//Assertions dos valores de fosforo, potassio, calcio, magnesio, enxofre e aluminio ideiais
 		assertEquals(9.0, solo.getFosforoIdeal(), 0);
@@ -27,5 +28,21 @@ public class Atividade4Test {
 		assertEquals(3.07, solo.getMOPercentual(), 0);
 		assertEquals(17.848837209302324, solo.getCarbono(), 0);
 	}
-
+	
+	@org.junit.Test
+	public void testCorrRecupFosforo() {
+		
+		//Assertions quantidade a aplicar, custo 
+		assertEquals(123.95079365079366, correcaoFosforo.getQuantidadeAplicar(), 0);
+		assertEquals(156.178, correcaoFosforo.getCustoHectar(), 0);
+		
+		//Assertions dos campos ItemCorreçãoFosforo 
+        assertEquals(12.395079365079365, correcaoFosforo.getItemCorrecaoFosforo().getValor(), 0);
+        assertEquals("Enxofre", correcaoFosforo.getItemCorrecaoFosforo().getNome());
+        
+        //Assertions dos campos ItemCorreçãoFosforo2
+        assertEquals(34.70622222222223, correcaoFosforo.getItemCorrecaoFosforo2().getValor(), 0);
+        assertEquals("Calcio", correcaoFosforo.getItemCorrecaoFosforo2().getNome());
+	}
 }
+
