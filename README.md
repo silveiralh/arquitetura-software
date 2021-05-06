@@ -1,3 +1,23 @@
+# Relatório - Atividade #4
+
+O código foi de fácil entendimento e a criação dos testes não exigiu um esforço muito grande. 
+- Todas as *`Assertions`* para verificar os códigos de [`teores do solo`](https://github.com/silveiralh/arquitetura-software/commit/d94b3d29706dec4d8b43d986af48571209b9e1bd) e [`correção e recuperação do fósforo`](https://github.com/silveiralh/arquitetura-software/commit/f5fbf5f4505951b3127f89ccab29e88aa9694f3e) funcionaram tiveram um resultado positivo.
+- As *`Assertions`* para verificar os códigos de [`correção e recuperação do potássio`](https://github.com/silveiralh/arquitetura-software/commit/43f24f3525820a1e4b09510b3dd0a283f0f64cec), mais especificamento dos campos `ItemCorrecaoPotassio` e `ItemCorrecaoPotassio2` precisava ser tratada na classe `FontePotassio` incluindo um retorno para o caso de a fonte for `CLORETO_DE_POTASSIO`(cujo código exemplo para solucionar o problema segue abaixo), pois os testes tentaram acessar campos com valores `null`, gerando uma exceção `NullPointerException`
+```
+public enum FontePotassio {
+    CLORETO_DE_POTASSIO(1, 58.0){,
+    	@Override
+        public ItemCorrecaoPotassio getItemCorrecaoPotassio(double quantidadeAplicar) {
+            return new ItemCorrecaoPotassio("", 0.0);  
+        };
+        @Override
+        public ItemCorrecaoPotassio getItemCorrecaoPotassio2(double quantidadeAplicar) {
+            return new ItemCorrecaoPotassio("", 0.0);  
+        }
+    },
+    ...
+    
+```
 # Arquitetura de Software
 Projeto para disciplina de Arquitetura do Software do curso de Engenharia de Software da UTFPR - Câmpus Cornélio Procópio
 
